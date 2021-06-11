@@ -49,6 +49,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\DeviceInfo.cs" />
+    <Compile Include="Class\Scales.cs" />
+    <Compile Include="Fuction_Page\Options.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fuction_Page\Options.Designer.cs">
+      <DependentUpon>Options.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\CHCNetSDK.cs" />
+    <Compile Include="Helper\Md5Helper.cs" />
+    <Compile Include="Helper\SqlHelper.cs" />
+    <Compile Include="Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\CreateOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\CreateOrder.Designer.cs">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,13 +84,86 @@
     <Compile Include="MainWin.Designer.cs">
       <DependentUpon>MainWin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Page\CustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\CustomerInfo.Designer.cs">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\DriverInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\DriverInfo.Designer.cs">
+      <DependentUpon>DriverInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\MaterialInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\MaterialInfo.Designer.cs">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\OperationLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\OperationLog.Designer.cs">
+      <DependentUpon>OperationLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\Scales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\Scales.Designer.cs">
+      <DependentUpon>Scales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\VehicleInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\VehicleInfo.Designer.cs">
+      <DependentUpon>VehicleInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\weightBase.cs" />
+    <EmbeddedResource Include="Fuction_Page\Options.resx">
+      <DependentUpon>Options.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\CreateOrder.resx">
+      <DependentUpon>CreateOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainWin.resx">
       <DependentUpon>MainWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\DriverInfo.resx">
+      <DependentUpon>DriverInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\MaterialInfo.resx">
+      <DependentUpon>MaterialInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\OperationLog.resx">
+      <DependentUpon>OperationLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\Scales.resx">
+      <DependentUpon>Scales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\VehicleInfo.resx">
+      <DependentUpon>VehicleInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -96,6 +192,15 @@
   <ItemGroup>
     <Content Include="business32x32.ico" />
     <Content Include="Ico\business32x32.ico" />
+    <Content Include="Resources\Bill.png" />
+    <Content Include="Resources\Close_BT.png" />
+    <Content Include="Resources\Close_WR.png" />
+    <Content Include="Resources\Loading.jpg" />
+    <Content Include="Resources\SaveText.png" />
+    <Content Include="Resources\SaveText_Disable.png" />
+    <Content Include="Resources\SaveText_Mouse.png" />
+    <Content Include="Resources\SaveText_MouseDown.png" />
+    <Content Include="Resources\Welcome.jpg" />
     <None Include="Resources\close_White2.png" />
     <None Include="Resources\close_White.png" />
     <None Include="Resources\user_login.png" />

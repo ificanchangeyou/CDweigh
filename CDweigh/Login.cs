@@ -19,7 +19,7 @@ namespace CDweigh
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            MsgText.Text = "";
         }
 
         private void CloseBtn_Click(object sender, EventArgs e)
@@ -36,6 +36,13 @@ namespace CDweigh
         private void CloseBtn_MouseLeave(object sender, EventArgs e)
         {
             CloseBtn.Image = Properties.Resources.close_White;
+        }
+
+        private void LoginBtn_Click(object sender, EventArgs e)
+        {
+            if (UserName.Text == null) { MsgText.Text = "请输入用户名"; return; }
+            if (Password.Text == null) MsgText.Text = "请输入密码"; return;
+
         }
     }
 }

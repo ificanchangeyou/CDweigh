@@ -83,6 +83,16 @@ namespace CDweigh.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Bill {
+            get {
+                object obj = ResourceManager.GetObject("Bill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap business {
             get {
                 object obj = ResourceManager.GetObject("business", resourceCulture);
@@ -123,6 +133,16 @@ namespace CDweigh.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Close_BT {
+            get {
+                object obj = ResourceManager.GetObject("Close_BT", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap close_White {
             get {
                 object obj = ResourceManager.GetObject("close_White", resourceCulture);
@@ -136,6 +156,16 @@ namespace CDweigh.Properties {
         internal static System.Drawing.Bitmap close_White2 {
             get {
                 object obj = ResourceManager.GetObject("close_White2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Close_WR {
+            get {
+                object obj = ResourceManager.GetObject("Close_WR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +283,16 @@ namespace CDweigh.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap Loading {
+            get {
+                object obj = ResourceManager.GetObject("Loading", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap log {
             get {
                 object obj = ResourceManager.GetObject("log", resourceCulture);
@@ -353,6 +393,46 @@ namespace CDweigh.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap SaveText {
+            get {
+                object obj = ResourceManager.GetObject("SaveText", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveText_Disable {
+            get {
+                object obj = ResourceManager.GetObject("SaveText_Disable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveText_Mouse {
+            get {
+                object obj = ResourceManager.GetObject("SaveText_Mouse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveText_MouseDown {
+            get {
+                object obj = ResourceManager.GetObject("SaveText_MouseDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap scale {
             get {
                 object obj = ResourceManager.GetObject("scale", resourceCulture);
@@ -446,6 +526,16 @@ namespace CDweigh.Properties {
         internal static System.Drawing.Bitmap vehicle {
             get {
                 object obj = ResourceManager.GetObject("vehicle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap Welcome {
+            get {
+                object obj = ResourceManager.GetObject("Welcome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

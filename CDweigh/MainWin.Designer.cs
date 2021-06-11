@@ -44,13 +44,13 @@
             this.scale2Item = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.reportItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.预约订单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.等待一次过磅订单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.等待二次过磅订单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.结束订单ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ReserveReportItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.OnceReportItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TwiceReportItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.EndedReportItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.InfoMangerItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.司机信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DriverItem = new System.Windows.Forms.ToolStripMenuItem();
             this.车辆管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.物料管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,7 +78,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.MainTab = new System.Windows.Forms.TabControl();
-            this.MainTabPage = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.menuStrip.SuspendLayout();
             this.HeadPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -89,7 +89,7 @@
             // menuStrip
             // 
             this.menuStrip.AllowMerge = false;
-            this.menuStrip.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.menuStrip.BackColor = System.Drawing.Color.AliceBlue;
             this.menuStrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.menuStrip.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.menuStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -101,7 +101,8 @@
             this.menuStrip.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(1484, 32);
+            this.menuStrip.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip.Size = new System.Drawing.Size(1660, 35);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -120,50 +121,50 @@
             this.userMenuItem.Image = global::CDweigh.Properties.Resources.user;
             this.userMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.userMenuItem.Name = "userMenuItem";
-            this.userMenuItem.Size = new System.Drawing.Size(78, 28);
+            this.userMenuItem.Size = new System.Drawing.Size(88, 31);
             this.userMenuItem.Text = "用户";
             // 
             // userLoginItem
             // 
             this.userLoginItem.Image = global::CDweigh.Properties.Resources.profile_user;
             this.userLoginItem.Name = "userLoginItem";
-            this.userLoginItem.Size = new System.Drawing.Size(160, 30);
+            this.userLoginItem.Size = new System.Drawing.Size(130, 32);
             this.userLoginItem.Text = "登录";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(127, 6);
             // 
             // userAddItem
             // 
             this.userAddItem.Image = global::CDweigh.Properties.Resources.UserAdd;
             this.userAddItem.Name = "userAddItem";
-            this.userAddItem.Size = new System.Drawing.Size(160, 30);
+            this.userAddItem.Size = new System.Drawing.Size(130, 32);
             this.userAddItem.Text = "新增";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(127, 6);
             // 
             // userDeleteItem
             // 
             this.userDeleteItem.Image = global::CDweigh.Properties.Resources.UserDelete;
             this.userDeleteItem.Name = "userDeleteItem";
-            this.userDeleteItem.Size = new System.Drawing.Size(160, 30);
+            this.userDeleteItem.Size = new System.Drawing.Size(130, 32);
             this.userDeleteItem.Text = "删除";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(127, 6);
             // 
             // userPowerItem
             // 
             this.userPowerItem.Image = ((System.Drawing.Image)(resources.GetObject("userPowerItem.Image")));
             this.userPowerItem.Name = "userPowerItem";
-            this.userPowerItem.Size = new System.Drawing.Size(160, 30);
+            this.userPowerItem.Size = new System.Drawing.Size(130, 32);
             this.userPowerItem.Text = "权限";
             // 
             // menuMenuItem
@@ -179,7 +180,7 @@
             this.menuMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.menuMenuItem.Image = global::CDweigh.Properties.Resources.menu;
             this.menuMenuItem.Name = "menuMenuItem";
-            this.menuMenuItem.Size = new System.Drawing.Size(78, 28);
+            this.menuMenuItem.Size = new System.Drawing.Size(88, 31);
             this.menuMenuItem.Text = "界面";
             // 
             // scaleItem
@@ -189,117 +190,121 @@
             this.scale2Item});
             this.scaleItem.Image = global::CDweigh.Properties.Resources.scale;
             this.scaleItem.Name = "scaleItem";
-            this.scaleItem.Size = new System.Drawing.Size(160, 30);
+            this.scaleItem.Size = new System.Drawing.Size(170, 32);
             this.scaleItem.Text = "地磅";
             // 
             // scale1Item
             // 
             this.scale1Item.Image = global::CDweigh.Properties.Resources.scale;
             this.scale1Item.Name = "scale1Item";
-            this.scale1Item.Size = new System.Drawing.Size(128, 26);
+            this.scale1Item.Size = new System.Drawing.Size(150, 32);
             this.scale1Item.Text = "北地磅";
+            this.scale1Item.Click += new System.EventHandler(this.scale1Item_Click);
             // 
             // scale2Item
             // 
             this.scale2Item.Image = global::CDweigh.Properties.Resources.scale;
             this.scale2Item.Name = "scale2Item";
-            this.scale2Item.Size = new System.Drawing.Size(128, 26);
+            this.scale2Item.Size = new System.Drawing.Size(150, 32);
             this.scale2Item.Text = "南地磅";
+            this.scale2Item.Click += new System.EventHandler(this.scale2Item_Click);
             // 
             // toolStripSeparator4
             // 
             this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator4.Size = new System.Drawing.Size(167, 6);
             // 
             // reportItem
             // 
             this.reportItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.预约订单ToolStripMenuItem,
-            this.等待一次过磅订单ToolStripMenuItem,
-            this.等待二次过磅订单ToolStripMenuItem,
-            this.结束订单ToolStripMenuItem});
+            this.ReserveReportItem,
+            this.OnceReportItem,
+            this.TwiceReportItem,
+            this.EndedReportItem});
             this.reportItem.Image = global::CDweigh.Properties.Resources.Reports;
             this.reportItem.Name = "reportItem";
-            this.reportItem.Size = new System.Drawing.Size(160, 30);
+            this.reportItem.Size = new System.Drawing.Size(170, 32);
             this.reportItem.Text = "报表";
             // 
-            // 预约订单ToolStripMenuItem
+            // ReserveReportItem
             // 
-            this.预约订单ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.reservation;
-            this.预约订单ToolStripMenuItem.Name = "预约订单ToolStripMenuItem";
-            this.预约订单ToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.预约订单ToolStripMenuItem.Text = "预约订单";
+            this.ReserveReportItem.Image = global::CDweigh.Properties.Resources.reservation;
+            this.ReserveReportItem.Name = "ReserveReportItem";
+            this.ReserveReportItem.Size = new System.Drawing.Size(250, 32);
+            this.ReserveReportItem.Text = "预约订单";
+            this.ReserveReportItem.Click += new System.EventHandler(this.ReserveReportItem_Click);
             // 
-            // 等待一次过磅订单ToolStripMenuItem
+            // OnceReportItem
             // 
-            this.等待一次过磅订单ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.first;
-            this.等待一次过磅订单ToolStripMenuItem.Name = "等待一次过磅订单ToolStripMenuItem";
-            this.等待一次过磅订单ToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.等待一次过磅订单ToolStripMenuItem.Text = "等待一次过磅订单";
+            this.OnceReportItem.Image = global::CDweigh.Properties.Resources.first;
+            this.OnceReportItem.Name = "OnceReportItem";
+            this.OnceReportItem.Size = new System.Drawing.Size(250, 32);
+            this.OnceReportItem.Text = "等待一次过磅订单";
             // 
-            // 等待二次过磅订单ToolStripMenuItem
+            // TwiceReportItem
             // 
-            this.等待二次过磅订单ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.second;
-            this.等待二次过磅订单ToolStripMenuItem.Name = "等待二次过磅订单ToolStripMenuItem";
-            this.等待二次过磅订单ToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.等待二次过磅订单ToolStripMenuItem.Text = "等待二次过磅订单";
+            this.TwiceReportItem.Image = global::CDweigh.Properties.Resources.second;
+            this.TwiceReportItem.Name = "TwiceReportItem";
+            this.TwiceReportItem.Size = new System.Drawing.Size(250, 32);
+            this.TwiceReportItem.Text = "等待二次过磅订单";
             // 
-            // 结束订单ToolStripMenuItem
+            // EndedReportItem
             // 
-            this.结束订单ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.finish;
-            this.结束订单ToolStripMenuItem.Name = "结束订单ToolStripMenuItem";
-            this.结束订单ToolStripMenuItem.Size = new System.Drawing.Size(208, 26);
-            this.结束订单ToolStripMenuItem.Text = "结束订单";
+            this.EndedReportItem.Image = global::CDweigh.Properties.Resources.finish;
+            this.EndedReportItem.Name = "EndedReportItem";
+            this.EndedReportItem.Size = new System.Drawing.Size(250, 32);
+            this.EndedReportItem.Text = "结束订单";
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(167, 6);
             // 
             // InfoMangerItem
             // 
             this.InfoMangerItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.司机信息ToolStripMenuItem,
+            this.DriverItem,
             this.车辆管理ToolStripMenuItem,
             this.用户管理ToolStripMenuItem,
             this.物料管理ToolStripMenuItem});
             this.InfoMangerItem.Image = global::CDweigh.Properties.Resources.info;
             this.InfoMangerItem.Name = "InfoMangerItem";
-            this.InfoMangerItem.Size = new System.Drawing.Size(160, 30);
+            this.InfoMangerItem.Size = new System.Drawing.Size(170, 32);
             this.InfoMangerItem.Text = "信息管理";
             // 
-            // 司机信息ToolStripMenuItem
+            // DriverItem
             // 
-            this.司机信息ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.driver;
-            this.司机信息ToolStripMenuItem.Name = "司机信息ToolStripMenuItem";
-            this.司机信息ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.司机信息ToolStripMenuItem.Text = "司机信息";
+            this.DriverItem.Image = global::CDweigh.Properties.Resources.driver;
+            this.DriverItem.Name = "DriverItem";
+            this.DriverItem.Size = new System.Drawing.Size(170, 32);
+            this.DriverItem.Text = "司机信息";
+            this.DriverItem.Click += new System.EventHandler(this.DriverItem_Click);
             // 
             // 车辆管理ToolStripMenuItem
             // 
             this.车辆管理ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.vehicle;
             this.车辆管理ToolStripMenuItem.Name = "车辆管理ToolStripMenuItem";
-            this.车辆管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.车辆管理ToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
             this.车辆管理ToolStripMenuItem.Text = "车辆管理";
             // 
             // 用户管理ToolStripMenuItem
             // 
             this.用户管理ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.Customer;
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
-            this.用户管理ToolStripMenuItem.Text = "用户管理";
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
+            this.用户管理ToolStripMenuItem.Text = "客户管理";
             // 
             // 物料管理ToolStripMenuItem
             // 
             this.物料管理ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.oil;
             this.物料管理ToolStripMenuItem.Name = "物料管理ToolStripMenuItem";
-            this.物料管理ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.物料管理ToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
             this.物料管理ToolStripMenuItem.Text = "物料管理";
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(167, 6);
             // 
             // logItem
             // 
@@ -308,21 +313,21 @@
             this.报警日志ToolStripMenuItem});
             this.logItem.Image = global::CDweigh.Properties.Resources.log;
             this.logItem.Name = "logItem";
-            this.logItem.Size = new System.Drawing.Size(160, 30);
+            this.logItem.Size = new System.Drawing.Size(170, 32);
             this.logItem.Text = "日志";
             // 
             // 操作日志ToolStripMenuItem
             // 
             this.操作日志ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.alarm;
             this.操作日志ToolStripMenuItem.Name = "操作日志ToolStripMenuItem";
-            this.操作日志ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.操作日志ToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
             this.操作日志ToolStripMenuItem.Text = "操作日志";
             // 
             // 报警日志ToolStripMenuItem
             // 
             this.报警日志ToolStripMenuItem.Image = global::CDweigh.Properties.Resources.operlog;
             this.报警日志ToolStripMenuItem.Name = "报警日志ToolStripMenuItem";
-            this.报警日志ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
+            this.报警日志ToolStripMenuItem.Size = new System.Drawing.Size(170, 32);
             this.报警日志ToolStripMenuItem.Text = "报警日志";
             // 
             // functionMenuItem
@@ -336,38 +341,38 @@
             this.functionMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.functionMenuItem.Image = global::CDweigh.Properties.Resources.function;
             this.functionMenuItem.Name = "functionMenuItem";
-            this.functionMenuItem.Size = new System.Drawing.Size(78, 28);
+            this.functionMenuItem.Size = new System.Drawing.Size(88, 31);
             this.functionMenuItem.Text = "功能";
             // 
             // settingItem
             // 
             this.settingItem.Image = global::CDweigh.Properties.Resources.setting;
             this.settingItem.Name = "settingItem";
-            this.settingItem.Size = new System.Drawing.Size(160, 30);
+            this.settingItem.Size = new System.Drawing.Size(170, 32);
             this.settingItem.Text = "系统设置";
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(167, 6);
             // 
             // dataItem
             // 
             this.dataItem.Image = global::CDweigh.Properties.Resources.info;
             this.dataItem.Name = "dataItem";
-            this.dataItem.Size = new System.Drawing.Size(160, 30);
+            this.dataItem.Size = new System.Drawing.Size(170, 32);
             this.dataItem.Text = "数据维护";
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(157, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(167, 6);
             // 
             // carmeraItem
             // 
             this.carmeraItem.Image = global::CDweigh.Properties.Resources.camera;
             this.carmeraItem.Name = "carmeraItem";
-            this.carmeraItem.Size = new System.Drawing.Size(160, 30);
+            this.carmeraItem.Size = new System.Drawing.Size(170, 32);
             this.carmeraItem.Text = "摄像道闸";
             // 
             // helperMenuItem
@@ -383,50 +388,50 @@
             this.helperMenuItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.helperMenuItem.Image = global::CDweigh.Properties.Resources.helper;
             this.helperMenuItem.Name = "helperMenuItem";
-            this.helperMenuItem.Size = new System.Drawing.Size(78, 28);
+            this.helperMenuItem.Size = new System.Drawing.Size(88, 31);
             this.helperMenuItem.Text = "帮助";
             // 
             // helperDocItem
             // 
             this.helperDocItem.Image = global::CDweigh.Properties.Resources.Helpdocument;
             this.helperDocItem.Name = "helperDocItem";
-            this.helperDocItem.Size = new System.Drawing.Size(144, 26);
+            this.helperDocItem.Size = new System.Drawing.Size(170, 32);
             this.helperDocItem.Text = "帮助文档";
             // 
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(167, 6);
             // 
             // errorDocItem
             // 
             this.errorDocItem.Image = global::CDweigh.Properties.Resources.errorDocument;
             this.errorDocItem.Name = "errorDocItem";
-            this.errorDocItem.Size = new System.Drawing.Size(144, 26);
+            this.errorDocItem.Size = new System.Drawing.Size(170, 32);
             this.errorDocItem.Text = "错误处理";
             // 
             // toolStripSeparator10
             // 
             this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator10.Size = new System.Drawing.Size(167, 6);
             // 
             // supportItem
             // 
             this.supportItem.Image = global::CDweigh.Properties.Resources.help;
             this.supportItem.Name = "supportItem";
-            this.supportItem.Size = new System.Drawing.Size(144, 26);
+            this.supportItem.Size = new System.Drawing.Size(170, 32);
             this.supportItem.Text = "技术支持";
             // 
             // toolStripSeparator11
             // 
             this.toolStripSeparator11.Name = "toolStripSeparator11";
-            this.toolStripSeparator11.Size = new System.Drawing.Size(141, 6);
+            this.toolStripSeparator11.Size = new System.Drawing.Size(167, 6);
             // 
             // aboutItem
             // 
             this.aboutItem.Image = global::CDweigh.Properties.Resources.about;
             this.aboutItem.Name = "aboutItem";
-            this.aboutItem.Size = new System.Drawing.Size(144, 26);
+            this.aboutItem.Size = new System.Drawing.Size(170, 32);
             this.aboutItem.Text = "关于软件";
             // 
             // HeadPanel
@@ -438,8 +443,9 @@
             this.HeadPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.HeadPanel.ForeColor = System.Drawing.Color.White;
             this.HeadPanel.Location = new System.Drawing.Point(0, 0);
+            this.HeadPanel.Margin = new System.Windows.Forms.Padding(4);
             this.HeadPanel.Name = "HeadPanel";
-            this.HeadPanel.Size = new System.Drawing.Size(1484, 40);
+            this.HeadPanel.Size = new System.Drawing.Size(1660, 50);
             this.HeadPanel.TabIndex = 1;
             this.HeadPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeadPanel_MouseDown);
             this.HeadPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HeadPanel_MouseMove);
@@ -453,9 +459,10 @@
             this.ExitBtn.FlatAppearance.BorderSize = 0;
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.ForeColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.Location = new System.Drawing.Point(1441, 0);
+            this.ExitBtn.Location = new System.Drawing.Point(1606, 0);
+            this.ExitBtn.Margin = new System.Windows.Forms.Padding(4);
             this.ExitBtn.Name = "ExitBtn";
-            this.ExitBtn.Size = new System.Drawing.Size(40, 40);
+            this.ExitBtn.Size = new System.Drawing.Size(50, 50);
             this.ExitBtn.TabIndex = 2;
             this.ExitBtn.UseVisualStyleBackColor = true;
             this.ExitBtn.Click += new System.EventHandler(this.ExitBtn_Click);
@@ -466,9 +473,10 @@
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(40, 0);
+            this.label1.Location = new System.Drawing.Point(50, 0);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 40);
+            this.label1.Size = new System.Drawing.Size(125, 50);
             this.label1.TabIndex = 1;
             this.label1.Text = "CDweigh";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -478,9 +486,10 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox1.Image = global::CDweigh.Properties.Resources.Main;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Padding = new System.Windows.Forms.Padding(6, 0, 0, 0);
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -489,49 +498,50 @@
             // 
             this.panel2.Controls.Add(this.menuStrip);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 40);
+            this.panel2.Location = new System.Drawing.Point(0, 50);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1484, 35);
+            this.panel2.Size = new System.Drawing.Size(1660, 44);
             this.panel2.TabIndex = 2;
             // 
             // MainTab
             // 
-            this.MainTab.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.MainTab.Controls.Add(this.MainTabPage);
+            this.MainTab.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.MainTab.Controls.Add(this.tabPage2);
             this.MainTab.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MainTab.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.MainTab.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MainTab.HotTrack = true;
-            this.MainTab.ItemSize = new System.Drawing.Size(60, 100);
-            this.MainTab.Location = new System.Drawing.Point(0, 75);
+            this.MainTab.ItemSize = new System.Drawing.Size(60, 30);
+            this.MainTab.Location = new System.Drawing.Point(0, 94);
+            this.MainTab.Margin = new System.Windows.Forms.Padding(4);
             this.MainTab.Multiline = true;
             this.MainTab.Name = "MainTab";
+            this.MainTab.Padding = new System.Drawing.Point(20, 6);
             this.MainTab.SelectedIndex = 0;
-            this.MainTab.Size = new System.Drawing.Size(1484, 588);
+            this.MainTab.Size = new System.Drawing.Size(1660, 772);
             this.MainTab.TabIndex = 3;
             this.MainTab.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.MainTab_DrawItem);
             this.MainTab.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MainTab_MouseDown);
             // 
-            // MainTabPage
+            // tabPage2
             // 
-            this.MainTabPage.BackColor = System.Drawing.Color.Snow;
-            this.MainTabPage.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MainTabPage.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.MainTabPage.Location = new System.Drawing.Point(104, 4);
-            this.MainTabPage.Name = "MainTabPage";
-            this.MainTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.MainTabPage.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.MainTabPage.Size = new System.Drawing.Size(1376, 580);
-            this.MainTabPage.TabIndex = 0;
-            this.MainTabPage.Text = "主页";
+            this.tabPage2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabPage2.Location = new System.Drawing.Point(4, 34);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(1652, 734);
+            this.tabPage2.TabIndex = 0;
+            this.tabPage2.Text = "Welcome";
             // 
             // MainWin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1484, 761);
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ClientSize = new System.Drawing.Size(1660, 996);
             this.Controls.Add(this.MainTab);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.HeadPanel);
@@ -539,11 +549,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainWin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CDweigh";
+            this.Load += new System.EventHandler(this.MainWin_Load);
+            this.Shown += new System.EventHandler(this.MainWin_Shown);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.HeadPanel.ResumeLayout(false);
@@ -568,12 +581,12 @@
         private System.Windows.Forms.ToolStripMenuItem scale1Item;
         private System.Windows.Forms.ToolStripMenuItem scale2Item;
         private System.Windows.Forms.ToolStripMenuItem reportItem;
-        private System.Windows.Forms.ToolStripMenuItem 预约订单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 等待一次过磅订单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 等待二次过磅订单ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 结束订单ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ReserveReportItem;
+        private System.Windows.Forms.ToolStripMenuItem OnceReportItem;
+        private System.Windows.Forms.ToolStripMenuItem TwiceReportItem;
+        private System.Windows.Forms.ToolStripMenuItem EndedReportItem;
         private System.Windows.Forms.ToolStripMenuItem InfoMangerItem;
-        private System.Windows.Forms.ToolStripMenuItem 司机信息ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DriverItem;
         private System.Windows.Forms.ToolStripMenuItem 车辆管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 物料管理ToolStripMenuItem;
@@ -606,7 +619,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.TabControl MainTab;
-        private System.Windows.Forms.TabPage MainTabPage;
+        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
