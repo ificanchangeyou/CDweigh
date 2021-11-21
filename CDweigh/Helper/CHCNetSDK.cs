@@ -1,6 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
-namespace Truck
+namespace CDweigh
 {
 	/// <summary>
 	/// CHCNetSDK 的摘要说明。
@@ -9,9 +9,6 @@ namespace Truck
     {
         public CHCNetSDK()
         {
-            //
-            // TODO: 在此处添加构造函数逻辑
-            //
         }
         public const int Barrier_Drop = 0; //关闭道闸
         public const int Barrier_Lift = 1;//打开道闸
@@ -10094,6 +10091,7 @@ namespace Truck
             public byte[] byRes2; //保留
         }
 
+
         [StructLayoutAttribute(LayoutKind.Sequential)]
         public struct NET_DVR_SNAPCFG
         {
@@ -16648,8 +16646,12 @@ namespace Truck
         /// <param name="lpInBuffer"></param>
         /// <param name="dwInBufferSize"></param>
         /// <returns></returns>
-        [DllImport(@"Dll\HCNetSDK.dll"   )]
+        [DllImport(@"Dll\HCNetSDK.dll"   )] 
         public static extern bool NET_DVR_RemoteControl(int lUserID, uint dwCommand, System.IntPtr lpInBuffer, uint dwInBufferSize);
+
+
+        [DllImport(@"Dll\HCNetSDK.dll")]
+        public static extern bool NET_DVR_ContinuousShoot(int lUserID, IntPtr lpInter);
 
 
         public struct NET_DVR_BARRIERGATE_CFG
@@ -16664,11 +16666,10 @@ namespace Truck
         }
 
 
+    #endregion
 
-        #endregion
-
-        #region 消息事件
-        [DllImport("User32.dll", EntryPoint = "PostMessage")]
+    #region 消息事件
+    [DllImport("User32.dll", EntryPoint = "PostMessage")]
         public static extern int PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         #endregion
 

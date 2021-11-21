@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Diagnostics;
 
-namespace CDweigh
+namespace CDweigh.Helper
 {
     class SqlHelper
     {

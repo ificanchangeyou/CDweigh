@@ -16,5 +16,10 @@ namespace CDweigh.Menu_Page
         {
             InitializeComponent();
         }
+
+        private void OperationLog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

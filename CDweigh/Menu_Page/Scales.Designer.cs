@@ -43,11 +43,11 @@
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.CurrentLicense = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Camera2_play = new System.Windows.Forms.PictureBox();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -85,7 +85,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.Save_But = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Camera1_play = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Vary_Dis = new System.Windows.Forms.PictureBox();
@@ -95,9 +95,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Camera2_play)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Camera1_play)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vary_Dis)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Infrared_Dis)).BeginInit();
             this.panel1.SuspendLayout();
@@ -251,13 +251,13 @@
             this.label21.Text = "开始作业时间:";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox14
+            // CurrentLicense
             // 
-            this.textBox14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox14.Location = new System.Drawing.Point(746, 139);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(183, 34);
-            this.textBox14.TabIndex = 63;
+            this.CurrentLicense.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.CurrentLicense.Location = new System.Drawing.Point(746, 139);
+            this.CurrentLicense.Name = "CurrentLicense";
+            this.CurrentLicense.Size = new System.Drawing.Size(183, 34);
+            this.CurrentLicense.TabIndex = 63;
             // 
             // button8
             // 
@@ -268,6 +268,7 @@
             this.button8.TabIndex = 62;
             this.button8.Text = "抬杆";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
             // 
             // button9
             // 
@@ -278,6 +279,7 @@
             this.button9.TabIndex = 61;
             this.button9.Text = "落杆";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Visible = false;
             // 
             // button10
             // 
@@ -288,15 +290,17 @@
             this.button10.TabIndex = 60;
             this.button10.Text = "抓  拍";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Visible = false;
             // 
-            // pictureBox4
+            // Camera2_play
             // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox4.Location = new System.Drawing.Point(990, 391);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(381, 328);
-            this.pictureBox4.TabIndex = 59;
-            this.pictureBox4.TabStop = false;
+            this.Camera2_play.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Camera2_play.Location = new System.Drawing.Point(990, 391);
+            this.Camera2_play.Name = "Camera2_play";
+            this.Camera2_play.Size = new System.Drawing.Size(381, 328);
+            this.Camera2_play.TabIndex = 59;
+            this.Camera2_play.TabStop = false;
+            this.Camera2_play.Visible = false;
             // 
             // button7
             // 
@@ -668,14 +672,15 @@
             this.button1.Text = "称  重";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // pictureBox2
+            // Camera1_play
             // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.pictureBox2.Location = new System.Drawing.Point(990, 47);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(381, 328);
-            this.pictureBox2.TabIndex = 47;
-            this.pictureBox2.TabStop = false;
+            this.Camera1_play.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Camera1_play.Location = new System.Drawing.Point(990, 47);
+            this.Camera1_play.Name = "Camera1_play";
+            this.Camera1_play.Size = new System.Drawing.Size(381, 328);
+            this.Camera1_play.TabIndex = 47;
+            this.Camera1_play.TabStop = false;
+            this.Camera1_play.DoubleClick += new System.EventHandler(this.Camera1_play_DoubleClick);
             // 
             // label4
             // 
@@ -765,11 +770,11 @@
             this.ClientSize = new System.Drawing.Size(1691, 931);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.CurrentLicense);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button10);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.Camera2_play);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -781,7 +786,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Save_But);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.Camera1_play);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Vary_Dis);
@@ -791,14 +796,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Scales";
             this.Text = "Scales";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Scales_FormClosing);
             this.Load += new System.EventHandler(this.Scales_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Scales_Paint);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Camera2_play)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Camera1_play)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vary_Dis)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Infrared_Dis)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -825,11 +831,11 @@
         private System.Windows.Forms.TextBox textBox15;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox CurrentLicense;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox Camera2_play;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
@@ -867,7 +873,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button Save_But;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox Camera1_play;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox Vary_Dis;

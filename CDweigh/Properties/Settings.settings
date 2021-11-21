@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="SqlConnStr" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Server=(local);database=Queue;uid=sa;pwd=sa123</Value>
+      <Value Profile="(Default)">Server=(local);database=CDWeigh;uid=sa;pwd=sa123</Value>
     </Setting>
   </Settings>
 </SettingsFile>

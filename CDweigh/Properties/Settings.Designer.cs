@@ -25,7 +25,7 @@ namespace CDweigh.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=(local);database=Queue;uid=sa;pwd=sa123")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=(local);database=CDWeigh;uid=sa;pwd=sa123")]
         public string SqlConnStr {
             get {
                 return ((string)(this["SqlConnStr"]));
