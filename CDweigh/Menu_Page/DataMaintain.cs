@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CDweigh.Menu_Page
 {
-    public partial class DataMaintain : UserControl
+    public partial class DataMaintain : Form
     {
         public DataMaintain()
         {
             InitializeComponent();
+        }
+
+        private void DataMaintain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

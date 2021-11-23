@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -96,10 +97,16 @@
     <Compile Include="Helper\Md5Helper.cs" />
     <Compile Include="Helper\SqlHelper.cs" />
     <Compile Include="Menu_Page\DataMaintain.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu_Page\DataMaintain.Designer.cs">
       <DependentUpon>DataMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Page\DeviceControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Page\DeviceControl.Designer.cs">
+      <DependentUpon>DeviceControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Page\Loading.cs">
       <SubType>Form</SubType>
@@ -168,7 +175,7 @@
       <DependentUpon>Scales.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu_Page\SysManagement.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu_Page\SysManagement.Designer.cs">
       <DependentUpon>SysManagement.cs</DependentUpon>
@@ -205,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Page\DataMaintain.resx">
       <DependentUpon>DataMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Page\DeviceControl.resx">
+      <DependentUpon>DeviceControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu_Page\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace CDweigh.Menu_Page
 {
-    public partial class SysManagement : Form
+    public partial class DeviceControl : Form
     {
-        public SysManagement()
+        public DeviceControl()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

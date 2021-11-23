@@ -783,32 +783,32 @@ namespace CDweigh
             });
             t.Start();
             */
-            log4net.Config.XmlConfigurator.Configure();
-            string strSql = "SELECT Count(*) FROM Users";
-            try
-            {
-                string count = SqlHelper.QueryScalar(Global.Sqldatabase, strSql).ToString();
-                if(Convert.ToInt32(count)==0)
-                {
-                    UserAdd add = new UserAdd(10);
-                    add.ShowDialog();
-                    if(add.DialogResult==DialogResult.OK)
-                    {
-                        
-                    }
-                }
-            }
-            catch (Exception)
-            {
+           // log4net.Config.XmlConfigurator.Configure();
+            //string strSql = "SELECT Count(*) FROM Users";
+            //try
+            //{
+            //    string count = SqlHelper.QueryScalar(Global.Sqldatabase, strSql).ToString();
+            //    if (Convert.ToInt32(count) == 0)
+            //    {
+            //        UserAdd add = new UserAdd(10);
+            //        add.ShowDialog();
+            //        if (add.DialogResult == DialogResult.OK)
+            //        {
 
-                throw;
-            }
+            //        }
+            //    }
+            //}
+            //catch (Exception)
+            //{
+
+            //    throw;
+            //}
 
 
-            login = new Login();
-            login.ShowDialog();
-            if (login.DialogResult != DialogResult.OK) Application.Exit();
-            
+            //login = new Login();
+            //login.ShowDialog();
+            //if (login.DialogResult != DialogResult.OK) Application.Exit();
+
             //检查配置文件同时导入配置
             if (!Censor_Config()) Application.Exit();
             //LED_Init();
@@ -892,11 +892,44 @@ namespace CDweigh
             //catch (Exception)
             //{
             //}
+
+            try
+            {
+                var tabPage = this.MainTab.TabPages[e.Index];
+                var tabRect = this.MainTab.GetTabRect(e.Index);
+                tabRect.Inflate(-2, -2);
+                var closeImages = new Bitmap(Properties.Resources.Close_BT);
+                var closeImage = new Bitmap(closeImages,20,20);
+                    e.Graphics.DrawImage(closeImage,
+                        (tabRect.Right - closeImage.Width),
+                        tabRect.Top + (tabRect.Height - closeImage.Height) / 2);
+                    TextRenderer.DrawText(e.Graphics, tabPage.Text, tabPage.Font,
+                        tabRect, tabPage.ForeColor, TextFormatFlags.Left);
+
+            }
+            catch (Exception ex) { throw new Exception(ex.Message); }
         }
 
         private void MainTab_MouseDown(object sender, MouseEventArgs e)
         {
-
+            // Process MouseDown event only till (tabControl.TabPages.Count - 1) excluding the last TabPage
+            for (var i = 0; i < this.MainTab.TabPages.Count - 1; i++)
+            {
+                var tabRect = this.MainTab.GetTabRect(i);
+                tabRect.Inflate(-2, -2);
+                var closeImages = new Bitmap(Properties.Resources.Close_BT);
+                var closeImage = new Bitmap(closeImages, 20, 20);
+                var imageRect = new Rectangle(
+                    (tabRect.Right - closeImage.Width),
+                    tabRect.Top + (tabRect.Height - closeImage.Height) / 2,
+                    closeImage.Width,
+                    closeImage.Height);
+                if (imageRect.Contains(e.Location))
+                {
+                    this.MainTab.TabPages.RemoveAt(i);
+                    break;
+                }
+            }
             //if (e.Button == MouseButtons.Left)
             //{
             //    int x = e.X, y = e.Y;
@@ -1259,10 +1292,25 @@ namespace CDweigh
             switch (pageText)
             {
                 case "系统设置":
+                    SysManagement sys = new SysManagement();
+                    sys.TopLevel = false;
+                    page.Controls.Add(sys);
+                    MainTab.TabPages.Add(page);
+                    sys.Show();
                     break;
                 case "数据维护":
+                    DataMaintain dataM = new DataMaintain();
+                    dataM.TopLevel = false;
+                    page.Controls.Add(dataM);
+                    MainTab.TabPages.Add(page);
+                    dataM.Show();
                     break;
                 case "摄像道闸":
+                    DeviceControl DeviceC = new DeviceControl();
+                    DeviceC.TopLevel = false;
+                    page.Controls.Add(DeviceC);
+                    MainTab.TabPages.Add(page);
+                    DeviceC.Show();
                     break;
                 default:
                     break;
